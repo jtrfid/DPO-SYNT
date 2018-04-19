@@ -21,5 +21,9 @@ bool is_subset(CONTROL_DECISION CD1, CONTROL_DECISION CD2) {
 /* Turns string str into a lowercase string using O(1) extra memory */
 void make_lower(char* str) {
 	int i = 0;
-	while (str[i]) str[i] = tolower(str[i++]);
+	//while (str[i]) str[i] = tolower(str[i++]);  // i++ error
+	while (str[i]) {
+		str[i] = tolower(str[i]); 
+		i++;
+	}
 }

@@ -17,7 +17,7 @@
 #include "../include/Utilities.h"
 using namespace std;
 
-#ifdef DEBUG
+#ifdef _DEBUG
 ostream& out = cout;
 #else
 ostringstream oss;
@@ -39,19 +39,19 @@ const char* const INITIAL_CLEAN_UP = "del /f/s/q ..\\results\\*.*";
 //const char* const INITIAL_CLEAN_UP = "dir";
 
 
-string FSM_FSM_FILE = "./results/FSM.fsm";
-string REQ_FSM_FILE = "./results/REQ_FSM.fsm";
-string RESULT_FSM_FILE = "./results/RESULT_FSM.fsm";
-string FSM_TXT_FILE = "./results/FSM.txt";
-string A_UxG_FILE = "./results/A_UxG.fsm";
-string A_UxG_REDUCED_FILE = "./results/A_UxG_reduced.fsm";
-string NBAIC_FILE = "./results/NBAIC.fsm";
-string ICS_FILE = "./results/ICS.fsm";
-string UBTS_FILE = "./results/UBTS.fsm";
-string EBTS_FILE = "./results/EBTS.fsm";
-string MPO_FILE = "./results/MPO.fsm";
-string BDO_FILE = "./results/BDO.fsm";
-string MPRCP_FILE = "./results/MPRCP.fsm";
+string FSM_FSM_FILE = "../results/FSM.fsm";
+string REQ_FSM_FILE = "../results/REQ_FSM.fsm";
+string RESULT_FSM_FILE = "../results/RESULT_FSM.fsm";
+string FSM_TXT_FILE = "../results/FSM.txt";
+string A_UxG_FILE = "../results/A_UxG.fsm";
+string A_UxG_REDUCED_FILE = "../results/A_UxG_reduced.fsm";
+string NBAIC_FILE = "../results/NBAIC.fsm";
+string ICS_FILE = "../results/ICS.fsm";
+string UBTS_FILE = "../results/UBTS.fsm";
+string EBTS_FILE = "../results/EBTS.fsm";
+string MPO_FILE = "../results/MPO.fsm";
+string BDO_FILE = "../results/BDO.fsm";
+string MPRCP_FILE = "../results/MPRCP.fsm";
 
 void do_BSCOPNBMAX(const string& FSM_file, const string& property,
 				   const string& ISP_file);
@@ -152,7 +152,7 @@ int main(int argc, char* argv[]) {
 	else if (MODE_FLAG == CONVERT) convert_fsm(FSM_file);
 	else if (MODE_FLAG == MPRCP) do_MPRCP(FSM_file, property, ISP_file, required_property);
 
-#ifndef DEBUG
+#ifndef _DEBUG
 	cout << oss.str();
 #endif
 
@@ -269,7 +269,10 @@ void do_MPRCP(const string& FSM_file, const string& property,
 	delete nbaic;
 }
 
-/* Finite State Machine file conversion utility */
+/* Finite State Machine file conversion utility
+ *  test.fsm to test.txt
+ *  or, test.txt to test.fsm
+ */
 void convert_fsm(const string& FSM_file) {
 	FSM* fsm = new FSM(FSM_file);
 	/* File extension is .fsm--convert to .txt format */
