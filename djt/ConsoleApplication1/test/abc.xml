@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XmlAutomaton Stochastic="false" numberOfAgents="1" hasOutput="false">
+    <state name="1" marked="false" initial="true" opacityOk="true">
+        <position x="173" y="100"/>
+        <size width="40" height="40"/>
+        <initialPosition x="-28" y="-28"/>
+    </state>
+    <state name="2" marked="false" opacityOk="true">
+        <position x="0" y="200"/>
+        <size width="40" height="40"/>
+    </state>
+    <state name="3" marked="true" opacityOk="true">
+        <position x="73" y="100"/>
+        <size width="46" height="46"/>
+    </state>
+    <state name="4" marked="false" opacityOk="true">
+        <position x="0" y="0"/>
+        <size width="40" height="40"/>
+    </state>
+    <transition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="XmlTransition" name="a" from="1" to="2" legal="true">
+        <labelPosition x="500" y="0"/>
+    </transition>
+    <transition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="XmlTransition" name="b" from="1" to="3" legal="true">
+        <labelPosition x="500" y="0"/>
+    </transition>
+    <transition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="XmlTransition" name="b" from="2" to="3" legal="true">
+        <labelPosition x="500" y="0"/>
+    </transition>
+    <transition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="XmlTransition" name="c" from="3" to="4" legal="true">
+        <labelPosition x="500" y="0"/>
+    </transition>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="XmlEvent" name="a" observable="true" controllable="true">
+        <AgentProperty observable="true" controllable="true"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="XmlEvent" name="b" observable="false" controllable="true">
+        <AgentProperty observable="false" controllable="true"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="XmlEvent" name="c" observable="true" controllable="false">
+        <AgentProperty observable="true" controllable="false"/>
+    </event>
+    <initial>1</initial>
+</XmlAutomaton>

@@ -1,0 +1,60 @@
+16
+
+0	0	2
+b1	1	uc	uo
+b2	2	uc	uo
+
+1	0	2
+o1	3	uc	o
+o2	5	uc	o
+
+2	0	2
+o1	4	uc	o
+o2	6	uc	o
+
+3	0	2
+c1	7	c	uo
+c2	8	c	uo
+
+4	0	2
+c1	10	c	uo
+c2	9	c	uo
+
+5	0	2
+c1	12	c	uo
+c2	11	c	uo
+
+6	0	2
+c1	13	c	uo
+c2	14	c	uo
+
+7	0	1
+o1	1	uc	o
+
+8	1	2
+c1	15	c	uo
+o1	1	uc	o
+
+9	0	1
+o1	2	uc	o
+
+10	1	2
+c2	15	c	uo
+o1	2	uc	o
+
+11	0	1
+o2	1	uc	o
+
+12	1	2
+c2	15	c	uo
+o2	1	uc	o
+
+13	0	1
+o2	2	uc	o
+
+14	1	2
+c1	15	c	uo
+o2	2	uc	o
+
+15	0	0
+

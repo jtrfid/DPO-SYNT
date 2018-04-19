@@ -1,0 +1,32 @@
+1. UMDES Format: *.fsm  (File-->Export-->to UMDES .fsm)
+<#of states>
+<state1>	<marked? 1(Y):0(N)>	<#of transitions>
+<event name>	<next state name>	<controlable? c(Y):uc(N)> <observable? o(Y):uo(N)>  //state1 transitions
+<event name>	<next state name>	<controlable? c(Y):uc(N)> <observable? o(Y):uo(N)>  //state1 transitions
+...
+<state2>	<marked? 1(Y):0(N)>	<#of transitions>
+<event name>	<next state name>	<controlable? c(Y):uc(N)> <observable? o(Y):uo(N)>  //state2 transitions
+<event name>	<next state name>	<controlable? c(Y):uc(N)> <observable? o(Y):uo(N)>  //state2 transitions
+
+2. DPO-SYNT: Discrete Control Synthesis for Partially-Observed Systems, *.txt
+<number_of_states> <number_of_events>
+<state1> <marked (m or u)>
+...
+<staten> <marked (m or u)>
+
+<event1> <controllability (c or u)> <observability (o or u)>
+...
+<eventn> <controllability (c or u)> <observability (o or u)>
+
+<event state> <event state> ... //state1 transitions
+...
+<event state> <event state> ... //staten transitions
+
+3. convert format
+*.txt to *.fsm
+DES_Supervisor -f ../test/test.txt -m CONVERT -w -v
+
+*.fsm to *.txt
+DES_Supervisor -f ../test/test.fsm -m CONVERT -w -v
+
+
