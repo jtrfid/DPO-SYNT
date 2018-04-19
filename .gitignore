@@ -1,0 +1,101 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+#编译文件
+Debug/
+Release/
+
+################### 
+# dev-c++文件
+*.o
+*.exe
+# 打开文件布局记录 
+*.layout
+# 编译脚本，可以自动生成 
+Makefile.win 
+################### 
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+.gitignore.bak
+
+################C++##################
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app 
+
+## Microsoft Visual Studio
+#.sdf文件和ipch目录一般占用空间比较大，几十兆甚至上百兆，与智能提示、错误提示、代码恢复和团队本地仓库等相关
+ipch/
+*.sdf
+*.aps
+*.suo
+*.opensdf
+*.vcxproj.user
+
+## office临时文件
+~$*.*
+
