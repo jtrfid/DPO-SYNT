@@ -1,0 +1,30 @@
+Format Reference
+1)	.fsm
+
+Line1:	<#of states>
+Line2:	<state name>	<marked? 1(Y):0(N)>	<#of transitions>
+Line3:	<event name>	<next state name>	<observable? o(Y):uo(N)>
+...
+Example:
+
+4
+state0	0	2
+uo	state1	uo
+uo	state2	uo
+
+state1	0	2
+a	state3	o
+
+state2	0	1
+b	state1	o
+
+state3	1	1
+a	state2	o
+
+2)	.fsm
+Line1:	<#of states>
+Line2:	<state name>	<marked? 1(Y):0(N)>	<#of transitions>
+event ?????????
+Line3:	<event name>	<next state name>	<controlable? c(Y):uc(N)> <observable? o(Y):uo(N)>
+Line4:	<event name>	<next state name>	<(uncontrolable but observable)? uc>
+Line5:	<event name>	<next state name>	<(unobservable but controlable)? uo>

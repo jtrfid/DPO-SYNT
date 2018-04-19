@@ -1,0 +1,13 @@
+4
+state0	0	2
+uo	state1	uo
+uo	state2	uo
+
+state1	0	1
+a	state3	o
+
+state2	0	1
+b	state1	o
+
+state3	1	1
+a	state2	o
